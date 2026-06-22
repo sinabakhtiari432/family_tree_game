@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شجره نامه خاندان</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+شجره نامه خاندان یزدانی و هوشیار سوداگر
+</title>
 
 <style>
+
 body{
 margin:0;
-display:flex;
-justify-content:center;
-align-items:center;
 height:100vh;
-background:#c9a86a;
+overflow:hidden;
+
+background:url('cover.jpg');
+background-size:cover;
+background-position:center;
+
 font-family:tahoma;
 }
 
-.box{
-background:white;
-padding:40px;
+.start-btn{
+
+position:absolute;
+
+bottom:80px;
+left:50%;
+
+transform:translateX(-50%);
+
+padding:20px 50px;
+
+font-size:28px;
+
+border:none;
+
 border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,.2);
+
+cursor:pointer;
+
+background:#0d5f44;
+color:white;
+
 }
 
-button{
-padding:15px 30px;
-font-size:20px;
-cursor:pointer;
-}
 </style>
 
 </head>
 
 <body>
 
-<div class="box">
-<h1>به شجره نامه خاندان خوش آمدید</h1>
-<p>برای آغاز سفر روی دکمه زیر کلیک کنید</p>
-<button onclick="startGame()">شروع سفر</button>
-</div>
-
-<script>
-function startGame(){
-alert("مرحله نقشه در نسخه بعدی اضافه می‌شود");
-}
-</script>
+<button
+class="start-btn"
+onclick="location.href='map.html'"
+>
+آغاز سفر در تاریخ خاندان
+</button>
 
 </body>
+
 </html>
