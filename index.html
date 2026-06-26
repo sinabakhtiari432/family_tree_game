@@ -10,6 +10,17 @@
 
 <style>
 
+/*==============================*/
+/* فونت */
+/*==============================*/
+
+@font-face{
+    font-family:'IranNastaliq';
+    src:url('IranNastaliq_YasDL.com.ttf') format('truetype');
+}
+
+/*==============================*/
+
 *{
 margin:0;
 padding:0;
@@ -19,27 +30,162 @@ box-sizing:border-box;
 body{
 
 height:100vh;
-font-family:tahoma;
+
 overflow:hidden;
 
-/* نسخه کامپیوتر */
+font-family:tahoma;
 
 background-image:url("cover-desktop.jpeg");
+
 background-size:cover;
-background-position:center center;
+
+background-position:center;
+
 background-repeat:no-repeat;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 }
 
+/*==============================*/
+/* کادر عنوان */
+/*==============================*/
+
+.title-box{
+
+position:absolute;
+
+top:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:88%;
+
+max-width:1200px;
+
+padding:30px;
+
+text-align:center;
+
+background:rgba(15,10,5,.45);
+
+border:3px solid #d4af37;
+
+border-radius:22px;
+
+backdrop-filter:blur(6px);
+
+box-shadow:0 0 40px rgba(0,0,0,.5);
+
+}
+
+/*==============================*/
+/* عنوان */
+/*==============================*/
+
+.title{
+
+font-family:'IranNastaliq';
+
+font-size:72px;
+
+font-weight:normal;
+
+color:#f6df96;
+
+opacity:0;
+
+transform:translateY(-80px);
+
+animation:titleIn 2s ease forwards;
+
+}
+
+/*==============================*/
+/* متن */
+/*==============================*/
+
+.welcome{
+
+margin-top:20px;
+
+font-size:23px;
+
+line-height:2.1;
+
+color:white;
+
+opacity:0;
+
+animation:welcomeIn 2s ease forwards;
+
+animation-delay:2.2s;
+
+}
+
+/*==============================*/
+
+@keyframes titleIn{
+
+0%{
+
+opacity:0;
+
+transform:translateY(-80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes welcomeIn{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==============================*/
 /* دکمه */
+/*==============================*/
 
 .start-btn{
 
-padding:18px 45px;
+position:absolute;
+
+bottom:70px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:20px 50px;
 
 font-size:28px;
 
@@ -49,25 +195,27 @@ color:white;
 
 border:none;
 
-border-radius:18px;
+border-radius:20px;
 
 cursor:pointer;
 
-transition:.3s;
+transition:.35s;
 
-box-shadow:0 10px 25px rgba(0,0,0,.35);
+box-shadow:0 12px 30px rgba(0,0,0,.35);
 
 }
 
 .start-btn:hover{
 
-transform:scale(1.05);
+transform:translateX(-50%) scale(1.06);
 
 background:#0a4d37;
 
 }
 
-/* ---------- نسخه موبایل ---------- */
+/*==============================*/
+/* موبایل */
+/*==============================*/
 
 @media screen and (max-width:768px){
 
@@ -81,15 +229,39 @@ background-position:center;
 
 }
 
+.title-box{
+
+top:15px;
+
+width:94%;
+
+padding:18px;
+
+}
+
+.title{
+
+font-size:36px;
+
+}
+
+.welcome{
+
+font-size:16px;
+
+line-height:2;
+
+}
+
 .start-btn{
 
-font-size:20px;
-
-padding:16px 30px;
+bottom:35px;
 
 width:85%;
 
-max-width:320px;
+font-size:20px;
+
+padding:15px;
 
 }
 
@@ -101,7 +273,32 @@ max-width:320px;
 
 <body>
 
+<div class="title-box">
+
+<h1 class="title">
+
+شجره‌نامه خاندان یزدانی و هوشیار سوداگر
+
+</h1>
+
+<p class="welcome">
+
+به گنجینه خاندان یزدانی و هوشیار سوداگر خوش آمدید.
+
+<br><br>
+
+در این سفر از میان خاطرات و تاریخ پرافتخار نیاکانمان عبور خواهید کرد.
+
+<br><br>
+
+ریشه‌ها را خواهید شناخت و میراثی را که نسل به نسل با عشق حفظ شده است، مشاهده خواهید کرد.
+
+</p>
+
+</div>
+
 <button class="start-btn"
+
 onclick="location.href='map.html'">
 
 آغاز سفر در تاریخ خاندان
